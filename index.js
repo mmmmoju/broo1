@@ -1,13 +1,13 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "-"
+var prefix = "="
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("m!obc")) {
+    if (message.content.startsWith("=obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "m!";
+  var prefix = "=";
 
   client.on("message", message => {
   
@@ -46,7 +46,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("m!avatar")) {
+if (message.content.startsWith("=avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -66,7 +66,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('m!adminbc')){
+if (message.content.startsWith('=adminbc')){
 if(!message.author.id === '510365119507595265') return;
 message.channel.sendMessage(' kkkجار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'm!help')
+    if(msg.content === '=help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -99,13 +99,13 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       m!obc | لأرسال برود كاست للكل
+       =obc | لأرسال برود كاست للكل
 
-       m!bc  |  لأرسال برود كاست للأونلاين
+       =bc  |  لأرسال برود كاست للأونلاين
 
-       m!invite | لدعوة البوت الي سيرفرك
+       =invite | لدعوة البوت الي سيرفرك
 
-       m!support | سيرفر السبورت** `)
+       =support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -113,7 +113,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "m!invite") {
+    if (message.content === "=invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
@@ -138,7 +138,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("m!bot")) {
+    if (message.content.startsWith("=bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
